@@ -24,6 +24,7 @@
               <li>
                 (2).定义路由(建议复制)
                 <pre>const routes = [ { path: '/foo', component: Foo }, { path: '/bar', component: Bar }]</pre>
+                <p>默认跳转路由<pre>{ path: '*', redirect: '/foo' }</pre></p>
               </li>
               <!-- （缩写）相当于 routes: routes -->
               <li>
