@@ -1,5 +1,5 @@
 <template>
-  <div id="life">
+  <div id="lif">
     生命周期函数----{{msg}}
     <br>
     <button @click="setMsg()">改变msg</button>
@@ -10,7 +10,7 @@
 <script>
   import home from './home.vue'
   export default {
-    name: 'life',
+    name: 'lif',
     data() {
       return {
         msg: "msg",
@@ -24,7 +24,7 @@
       },
       //方法不加()，因为()表示执行方法
       run() {
-        alert('我是life的方法')
+        alert('我是lif的方法')
       }
 
     },
@@ -60,6 +60,7 @@
 </script>
 
 <style>
-
-
+  #lif{
+    background: green;
+  }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div id="home">
     <h2>我是头部组建--{{title}}</h2>
-    <button @click="run()">执行life(父组件)的方法</button>
-    <button @click="getLife()">执行life(父组件)的数据和方法</button>
+    <button @click="run()">执行lif(父组件)的方法</button>
+    <button @click="getLife()">执行lif(父组件)的数据和方法</button>
   </div>
 </template>
 <script>
@@ -28,5 +28,10 @@
     //   'title':String,
     // }
   }
-
 </script>
+
+<style>
+  #home{
+    background: blue;
+  }
+</style>

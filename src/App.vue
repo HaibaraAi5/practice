@@ -36,11 +36,11 @@
         <button @click='deleteLi(key)'>删除</button>
       </li>
     </ul>
-    <!-- life.vue为注册的组件 -->
+    <!-- lif.vue为注册的组件 -->
     <br>
-    <v-life v-if="flg"></v-life>
+    <!-- <v-lif v-if="flg"></v-lif> -->
     <br>
-    <button @click="flg=!flg">挂在以及写在life组件</button>
+    <button @click="flg=!flg">挂在以及写在lif组件</button>
     <br>
     <button @click="getData()">请求数据</button>
     <br>
@@ -48,6 +48,18 @@
     <ul>
       <li v-for="item in list2">{{item.title}}</li>
     </ul>
+    <!-- <v-child ref="children"></v-child> -->
+    <button @click="getChildren()">主动获取子组件的属性和方法</button>
+    <!-- <v-sibling></v-sibling> -->
+    <hr>
+    <br>
+    <!-- <v-routers></v-routers> -->
+    <router-view></router-view>
+    <router-link to="./routers">routers组件</router-link>
+    <router-link to="./child">child组件</router-link>
+    <router-link to="./sibling">sibling组件</router-link>
+    <router-link to="./lif">lif组件</router-link>
+    <router-link to="./home">home组件</router-link>
   </div>
 </template>
 
@@ -59,8 +71,16 @@
     2.哪里用哪里引入axios
     */
   //fetch-jsonp数据请求自己看看，和axios一样
+  // 以下都属于在app.vue中手动挂载
+  /*
   import storage from './model/storage.js'
-  import life from './life.vue'
+  import lif from './lif.vue'
+  import Axios from 'axios'
+  import childfrom './child.vue'
+  import sibling from './sibling.vue'
+  import routers from './routers.vue'
+  */
+  import storage from './model/storage.js'
   import Axios from 'axios'
   // console.log(storage)
   export default {
@@ -145,6 +165,10 @@
         }).catch(data => {
           console.log(error)
         })
+      },
+      getChildren() {
+        alert(this.$refs.children.message);
+        console.log(this.$refs.children.runChildren())
       }
 
     },
@@ -158,9 +182,12 @@
       //刷新加载数据
       // this.getData();
     },
-    components: {
-      'v-life': life
-    },
+    // components: {
+    //   'v-lif': lif,
+    //   'v-child': child,
+    //   'v-sibling': sibling,
+    //   'v-routers': routers
+    // },
   }
 
 </script>
