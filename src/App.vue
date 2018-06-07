@@ -60,6 +60,8 @@
     <router-link to="./sibling">sibling组件</router-link>
     <router-link to="./lif">lif组件</router-link>
     <router-link to="./home">home组件</router-link>
+    <router-link to="./getRouter">vue动态传值</router-link>
+    <router-link to="./getRouter">get传值</router-link>
   </div>
 </template>
 

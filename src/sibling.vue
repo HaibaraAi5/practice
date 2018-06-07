@@ -6,7 +6,7 @@
 <script>
   // 非父子组件传值
   /*
-  1.新建一个js文件，实例化vue并暴露实例
+  1.新建一个js文件，实例化vue并暴露实例(在VueEvent.js中)
   2.在要广播的地方引入实例
   3.通过  VueEvent.$emit('名称','数据')
   4.在接受广播数据的地方用VueEvent.$on('名称',function(){

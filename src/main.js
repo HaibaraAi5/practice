@@ -2,15 +2,18 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
-Vue.use(VueResource);
-Vue.use(VueRouter);
-//1.创建组件
+Vue.use(VueResource)
+Vue.use(VueRouter)
+// 1.创建组件
 import child from './child.vue'
 import sibling from './sibling.vue'
 import routers from './routers.vue'
 import lif from './lif.vue'
-
-//2.配置路由
+import dynamicRouter from './dynamicRouter.vue'
+import content from './content.vue'
+import getRouter from './getRouter.vue'
+import getContent from './getContent.vue'
+// 2.配置路由
 const routes = [{
   path: '/child',
   component: child
@@ -20,24 +23,38 @@ const routes = [{
 }, {
   path: '/routers',
   component: routers
-}
-, {
+}, {
   path: '/lif',
   component: lif
+}, {
+  path: '/dynamicRouter',
+  component: dynamicRouter
+}, {
+  path: '/content/:aid',  //动态路由  aid表示传值
+  component: content
+}, {
+  path: '/getRouter',
+  component: getRouter
+}, {
+  path: '/getContent',
+  component: getContent
 }]
 
-//3.实例化VueRouter
+
+
+
+// 3.实例化VueRouter
 const router = new VueRouter({
   routes
 })
-//4.挂载路由
+// 4.挂载路由
 new Vue({
   el: '#app',
   router,
   render: h => h(App)
 })
 // 5.<router-view></router-view>放在app.vue中
-//使用vue-resource请求数据的步骤
+// 使用vue-resource请求数据的步骤
 // 1.cnpm install vue-resource --save
 // 2.在main.js中引入vue-resource
 // 3.Vue.use(VueResource)
