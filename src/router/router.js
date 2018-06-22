@@ -20,6 +20,7 @@ import whoUse from '../components/whoUse.vue'
 import user from '../components/user.vue'
 import userAdd from '../model/user/userAdd.vue'
 import userMsg from '../model/user/userMsg.vue'
+import vuex from '../components/vuex.vue'
 // 2.配置路由
 const routes = [{
   path: '/child',
@@ -76,6 +77,9 @@ const routes = [{
 }, {
   path: '/infiniteScroll',
   component: infiniteScroll
+},{
+  path: '/vuex',
+  component: vuex
 }]
 
 // 3.实例化VueRouter

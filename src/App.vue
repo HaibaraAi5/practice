@@ -53,8 +53,6 @@
     <!-- <v-sibling></v-sibling> -->
     <hr>
     <br>
-    <!-- <v-routers></v-routers> -->
-    <router-view></router-view>
     <router-link to="./routers">routers组件</router-link>
     <br>
     <router-link to="./child">child组件</router-link>
@@ -83,24 +81,14 @@
     <br>
     <router-link to="./whoUse">谁用</router-link>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <router-link to="./infiniteScroll">上拉分页加载</router-link>
     <router-link to="./routerModular">路由的模块化</router-link>
+    <hr>
+    <router-link to="./vuex">vuex的作用</router-link>
+    <br>
+    <hr>
+    <!-- <v-routers></v-routers> -->
+    <router-view class="appClass"></router-view>
   </div>
 </template>
 
@@ -240,7 +228,11 @@
 
 </script>
 
-<style>
-
+<style scoped>
+.appClass{
+  width:800px;
+  height: 100px;
+  border-radius: 20px;
+}
 
 </style>
