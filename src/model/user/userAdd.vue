@@ -1,5 +1,6 @@
 <template>
-  <div id="getContent">
+  <div id="userAdd">
+    增加用户
   </div>
 </template>
 
@@ -10,16 +11,9 @@
 
       }
     },
-    mounted(){
-      //获取get传值
-      console.log(this.$route.query)
+    methods: {
+
     }
   }
 
 </script>
-
-<style>
-
-
-</style>
-

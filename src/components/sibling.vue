@@ -13,7 +13,7 @@
 
   })
   */
-  import VueEvent from './model/VueEvent.js'
+  import VueEvent from '../model/VueEvent.js'
   export default {
     data() {
       return {

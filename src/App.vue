@@ -56,12 +56,51 @@
     <!-- <v-routers></v-routers> -->
     <router-view></router-view>
     <router-link to="./routers">routers组件</router-link>
+    <br>
     <router-link to="./child">child组件</router-link>
+    <br>
     <router-link to="./sibling">sibling组件</router-link>
+    <br>
     <router-link to="./lif">lif组件</router-link>
+    <br>
     <router-link to="./home">home组件</router-link>
+    <br>
     <router-link to="./getRouter">vue动态传值</router-link>
+    <br>
     <router-link to="./getRouter">get传值</router-link>
+    <br>
+    <router-link to="./routerData">路由请求数据</router-link>
+    <br>
+    <hr>
+    <button @click="go()">通过JavaScript跳转页</button>
+    <router-link to="./user">路由嵌套</router-link>
+    <br>
+    <router-link to="./elementUi">pc端的UI框架</router-link>
+    <br>
+    <router-link to="./MintUi">移动端的UI框架</router-link>
+    <br>
+    <router-link to="./actionSheet">actionSheet</router-link>
+    <br>
+    <router-link to="./whoUse">谁用</router-link>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <router-link to="./infiniteScroll">上拉分页加载</router-link>
+    <router-link to="./routerModular">路由的模块化</router-link>
   </div>
 </template>
 
@@ -171,6 +210,13 @@
       getChildren() {
         alert(this.$refs.children.message);
         console.log(this.$refs.children.runChildren())
+      },
+      go() {
+        //注意：官方文档写错了
+        this.$router.push({
+          path: 'lif'
+        })
+        // this.$router.push({path:'/routerData/499'})
       }
 
     },
