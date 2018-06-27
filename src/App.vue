@@ -86,6 +86,12 @@
     <hr>
     <router-link to="./vuex">vuex的作用</router-link>
     <br>
+    <router-link to="./schart">schart图表</router-link>
+    <br>
+    <router-link to="./echart">echart图表
+    </router-link>
+
+    <br>
     <hr>
     <!-- <v-routers></v-routers> -->
     <router-view class="appClass"></router-view>
@@ -229,10 +235,10 @@
 </script>
 
 <style scoped>
-.appClass{
-  width:800px;
-  height: 100px;
-  border-radius: 20px;
-}
+  .appClass {
+    width: 800px;
+    height: 100px;
+    border-radius: 20px;
+  }
 
 </style>

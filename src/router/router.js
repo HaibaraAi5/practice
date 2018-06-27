@@ -21,6 +21,8 @@ import user from '../components/user.vue'
 import userAdd from '../model/user/userAdd.vue'
 import userMsg from '../model/user/userMsg.vue'
 import vuex from '../components/vuex.vue'
+import schart from '../components/schart.vue'
+import echart from '../components/echart.vue'
 // 2.配置路由
 const routes = [{
   path: '/child',
@@ -77,9 +79,15 @@ const routes = [{
 }, {
   path: '/infiniteScroll',
   component: infiniteScroll
-},{
+}, {
   path: '/vuex',
   component: vuex
+}, {
+  path: '/schart',
+  component: schart
+},{
+  path: "/echart",
+  component: echart
 }]
 
 // 3.实例化VueRouter
